@@ -1,0 +1,17 @@
+import Vue from 'vue'
+
+Vue.mixin({
+	computed:{
+		routes(){
+			return JSON.parse('***')
+		}
+	},
+
+	methods: {
+		route(name){
+			return this.routes.filter((r) => {
+				return r.name == name
+			})[0].uri
+		}
+	}
+})
